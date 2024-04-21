@@ -85,16 +85,34 @@ function updateCandidateDetails({rollNos,names}) {
 
 function saveCanvas() {
   const link = document.createElement('a');
-  const {canvas, ctx, bb} = getCanvas(canvasSel)
-  link.download = `${slug(Experiment.rollNos)}-${slug(document.title)}-canvas.png`;
-  link.href = canvas.toDataURL()
-  link.click();  
+  const { canvas, ctx, bb } = getCanvas(canvasSel);
+  
+  // Create a new canvas to hold the merged image
+  const mergedCanvas = document.createElement('canvas');
+  const mergedCtx = mergedCanvas.getContext('2d');
+
+  // Set the dimensions of the new canvas
+  mergedCanvas.width = canvas.width;
+  mergedCanvas.height = canvas.height;
+
+  // Draw the background image on the merged canvas
+  const backgroundImage = new Image();
+  backgroundImage.src = 'assets/background.jpg'; // Replace with the URL of your background image
+  backgroundImage.onload = function() {
+    mergedCtx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    
+    // Draw the original canvas content on top of the background
+    mergedCtx.drawImage(canvas, 0, 0);
+
+    // Set up the download link with the data URL of the merged canvas
+    link.download = `${slug(Experiment.rollNos)}-${slug(document.title)}-canvas.png`;
+    link.href = mergedCanvas.toDataURL();
+
+    // Trigger the download
+    link.click();
+  };
 }
 
-
-// ----------------------------------------------------
-// String Manipulations
-// ----------------------------------------------------
 function slug(s) {
   return s
     .toLowerCase()
