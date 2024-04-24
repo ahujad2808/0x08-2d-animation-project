@@ -1,7 +1,7 @@
 class Animation {
   constructor(canvasId) {
       this.canvas = document.getElementById('myCanvas');
-      this.canvas.style.backgroundImage = "url('assets/background.jpg')"; // Replacing background 
+      this.canvas.style.backgroundImage = "url('assets/background.jpg')";  
       this.canvas.style.backgroundSize = "cover";
       this.canvas.style.backgroundRepeat = "no-repeat";
       this.ctx = this.canvas.getContext('2d');
@@ -19,7 +19,9 @@ class Animation {
                     { x: 100, y: 100, width: 100, height: 50, speed: 2 }, 
                     { x: 300, y: 150, width: 120, height: 60, speed: 1.6 }, 
                     { x: 500, y: 200, width: 110, height: 55, speed: 2.4 } 
-                ];
+                ]; 
+   
+
   }
 
   draw() {
@@ -29,6 +31,7 @@ class Animation {
       this.drawBall();
       this.drawPerson();
       this.drawClouds();
+    //   this.drawRainbow();
       requestAnimationFrame(() => this.draw());
   }
 
@@ -179,13 +182,11 @@ class Animation {
 
 drawClouds() {
     this.clouds.forEach(cloud => {
-        cloud.x += cloud.speed; // Move the cloud horizontally
-        if (cloud.x > this.canvas.width) { // Reset cloud position when it goes beyond canvas width
+        cloud.x += cloud.speed; 
+        if (cloud.x > this.canvas.width) { 
             cloud.x = -cloud.width;
         }
         this.drawCloud(cloud);
     });
 }
-
-
 }
