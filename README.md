@@ -17,4 +17,4 @@
 3. Teaser
 ![Project](./102117155-0x08-project-teaser.png)
 4. Video Link
-[Video URL](https://drive.google.com/file/d/1cnqYbb5nyGV5Bt9lRXHrvlnEXjSIASWE/view?usp=sharing)
+[Video URL](https://drive.google.com/file/d/1giaa5h9Ixd6UeTm62u-ZEt3U02OW8OWT/view?usp=sharing)

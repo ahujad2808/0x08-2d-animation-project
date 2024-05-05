@@ -4,6 +4,8 @@ class Animation {
       this.canvas.style.backgroundImage = "url('assets/background.jpg')";  
       this.canvas.style.backgroundSize = "cover";
       this.canvas.style.backgroundRepeat = "no-repeat";
+  
+      
       this.ctx = this.canvas.getContext('2d');
 
       this.ballX = 350;
