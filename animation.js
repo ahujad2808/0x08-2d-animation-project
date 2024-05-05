@@ -20,13 +20,15 @@ class Animation {
                     { x: 300, y: 150, width: 120, height: 60, speed: 1.6 }, 
                     { x: 500, y: 200, width: 110, height: 55, speed: 2.4 } 
                 ]; 
-   
+     this.sunAngle = 0; // For sun rotation
+      
 
   }
 
   draw() {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
+     
+      this.drawSun(); // Add sun drawing function
       this.drawGoalPost();
       this.drawBall();
       this.drawPerson();
@@ -82,7 +84,7 @@ class Animation {
       }
 
       this.ctx.beginPath();
-      this.ctx.arc(this.personX + 15, this.personY - 6, 10, 0, Math.PI * 2);
+      this.ctx.arc(this.personX + 15, this.personY - 5, 10, 0, Math.PI * 2);
       this.ctx.fill();
       this.ctx.lineWidth = 3.0;
       this.ctx.fillRect(this.personX + 10, this.personY - 10, 10, 40);
@@ -189,4 +191,42 @@ drawClouds() {
         this.drawCloud(cloud);
     });
 }
+
+drawSun() {
+    const sunRadius = 40;
+    const sunX = this.canvas.width - sunRadius - 100; // Adjust position as needed
+    const sunY = sunRadius + 60; // Adjust position as needed
+    const numRays = 12; // Number of rays
+
+    this.ctx.save();
+    this.ctx.translate(sunX, sunY);
+    this.ctx.rotate(this.sunAngle * Math.PI / 180); // Rotate sun
+
+    // Draw sun rays
+    this.ctx.strokeStyle = "#FFD700"; // Yellow
+    this.ctx.lineWidth = 2; // Adjust thickness as needed
+    this.ctx.beginPath();
+    for (let i = 0; i < numRays; i++) {
+        const angle = (i / numRays) * Math.PI * 2;
+        const x1 = Math.cos(angle) * sunRadius;
+        const y1 = Math.sin(angle) * sunRadius;
+        const x2 = Math.cos(angle) * (sunRadius + 20); // Length of rays
+        const y2 = Math.sin(angle) * (sunRadius + 20); // Length of rays
+        this.ctx.moveTo(x1, y1);
+        this.ctx.lineTo(x2, y2);
+    }
+    this.ctx.stroke();
+
+    // Draw sun circle
+    this.ctx.fillStyle = "#FFD700"; // Yellow
+    this.ctx.beginPath();
+    this.ctx.arc(0, 0, sunRadius, 0, Math.PI * 2);
+    this.ctx.fill();
+
+    this.ctx.restore();
+
+    this.sunAngle += 0.2; // Increment angle for rotation animation
+}
+
+
 }

@@ -1,50 +1,330 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full w-full">
+<!doctype html>
+<html lang="en">
   <head>
-    <title>0x08 : 2D Animations (Project)</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Carousel Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+crossorigin="anonymous"
+/>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
   </head>
-  <body class="h-full w-full text-sm">
-    <div class="container flex flex-col nowrap gap-2
-                p-8 h-full m-auto">
-      <header class="flex flex-col md:flex-row justify-between md:items-end">
-        <h1 class="flex-none text-2xl font-bold">0x08 :
-          2D Animations (Project)</h1>
-        <p class="md:text-right text-xs md:text-sm" id="by"></p>
-      </header>
-      <div class="flex-1 flex flex-col lg:flex-row
-                  gap-4 lg:gap-8">
-        <main class="experiment flex-1 flex flex-col gap-2">
-          <div class="flex-1 relative">
-            <canvas id="myCanvas"
-                    width="10" height="1"
-                    class=" bg-slate-100 w-full h-full"></canvas>
-            <div class="absolute top-0 right-0 text-center">
-              <a class="cursor-pointer block p-2
-                        text-blue-300 hover:text-blue-500
-                        active:text-blue-700"
-                 href="javascript:saveCanvas()"
-                 title="Download canvas as image."
-                 ><ion-icon
-                    name="save"
-                    class="text-3xl"
-                    ></ion-icon><br/>
-                <span class="text-sm">Download</span></a>
-          </div>          </div>
-        </main>
-       
+  <body>
+    
+<header >
+  <nav  class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color:rgb(6, 102, 48);
+  padding: 0%;">
+    <div style="background-color:rgb(221, 215, 191) ;
+    ;" class="container-fluid ">
+      <a class="navbar-brand hi" href="#" style="color:rgb(74, 97, 97);"><b>Ball Hit Simulation </b></a><a href="/index2.html"><button class="button-334" >Live Demo</button></a>
+
+      </div>
+   
+  </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="bd-placeholder-img" width="100%" height="100%" src="images/Untitled design.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></img>
+
+        <div class="container">
+          
+          <div class="carousel-caption text-start" style="color:rgb(36, 38, 37);  padding: 100px; margin: 10px;" >
+            
+            <h1 style="color:rgb(36, 38, 37)"><b>Objective</b></h1>
+            
+            <p style="color:rgb(38, 40, 39);"><b>The objective is to design an immersive and visually stunning computer graphics animation that seamlessly blends the dynamic movements of clouds and the sun with the football hit simulation, aiming to evoke a sense of wonder and excitement while highlighting the interconnection between nature and sports.</b></p>
+
+          </div>
+        </div>
+      </div>
+      
+     
+    </div>
+   
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+  <div>
+    <p class  = "idk">
+
+      <h2 class="featurette-heading idk"  style="padding:30px; 
+      "><b>-Assets-</b></h2>
+    </p>
+  </div>
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/background.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+        <h2>Background Image</h2>
+        <p> A nature’s view with vibrant colours and detailed textures.</p>
+        
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/cloud.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+        <h2>Clouds</h2>
+        <p>Three clouds drifting across the sky from left to right with different speeds, casting dynamic movements.
+        </p>
+        
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.svgrepo.com/show/513351/sun.svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+        <h2>Sun</h2>
+        <p>A radiant sun rotating about its axis in the top right part of the scene.
+        </p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.svgrepo.com/show/40238/boy.svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+        <h2>Stick Man</h2>
+        <p>Simplified yet expressive stick figure representing the soccer players in action.
+        </p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="	https://www.svgrepo.com/show/421904/ball-game-sport.svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+        <h2>Ball</h2>
+        <p>A textured soccer ball, complete with intricate panelling and realistic details.
+        </p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/goal-svgrepo-com (3).svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+        <h2>Goalpost</h2>
+        <p>Sturdy goalpost on the right side of the field.
+        </p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">&nbspResources</h2>
+        <p class="lead">
+            <ul>
+            <li><b>AI Tools : </b>These tools helped us draw an initial template for our project and guide us on how to achieve the desired results.
+            </li><li>
+              <b>Canva :</b> This platform helped us to get various elements and vectors for our project and makes our project look more realistic by adding a nature’s background.
+            </li><li>
+             <b>Inkscape :</b>  This software helped us convert various .svg files to .html5 files and hence convert images to javascript files in fraction of seconds.
+            </li><li>
+             <b>Online Tutorials :</b>  Various YouTube  channels offer comprehensive tutorials on working on canvas , adding animations and creating beautiful scenes.
+            </li><li>
+              <b>Online websites : </b> Websites like Stack Overflow, Reddit and various other platforms helped us to deal with troubleshooting problems.
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-md-5">
+       <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/Untitled design (2).png" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
       </div>
     </div>
-    <script type="text/javascript" src="./canvas-helpers.js"></script>
-    <script type="text/javascript" src="./animation.js"></script>
-    <script type="text/javascript" src="./experiment.js"></script>
-    <script type="text/javascript" src="./main.js"></script>
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        main();
-      });
-    </script>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">&nbspSources of Inspiration</h2>
+        <p class="lead">
+          <ul>
+          <li>
+            <b>Realism : </b> The aim to create a simulation that feels as realistic as possible. Creating something that people watch in their Daily life catches their attention easily and helps them to relate and show their excitement.  
+
+          </li><li>
+            <b>Real-Life Football Matches :</b> This sport is very popular and children show great interest in this sport.
+
+          </li><li>
+            <b>Video games :</b> There are several Video games like FIFA, Pro Evolution Soccer (PES), which excite people and make them pay attention to various ball movements.
+
+          </li><li>
+           <b> Educating people :</b> These activities help to observe player movements and ball physics. Paying attention to clouds movement and the physics of the football, including its trajectory, spin, and how it interacts with other objects such as  the ground and goalposts makes people learn new concepts.
+
+          </li><li>
+            <b>Sports Films and Documentaries :</b> There are several bollywood movies like Chak De! India that people like and involves the same scenes.
+          </li>
+        </ul>
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/1234-removebg-preview.png" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Contributors</h2>
+        
+          <div>
+            <label ><b>Amisha </b></label>
+          </div>
+          <div>This team member was responsible for creating and animating the natural elements such as clouds and the sun. She also contributed to the overall documentation and presentation task. </div>
+          <div>
+            <label ><b>Dev Ahuja </b></label>
+          </div>
+          <div>This team member oversaw technical aspects such as performance optimization and also worked on putting multiple movements together in one scene. He  also contributed to the overall documentation and presentation task.
+             </div>
+          <div>
+            <label ><b>Satyajeet Bedi</b></label>
+          </div>
+          <div>This team member focused on animating the football player and simulating the football hit. He also researched various simulations and motions and helped to give a realistic look to the overall project.
+            </div>
+          
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="450" height="450" src="images/insp.png" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="90%" height="90%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+      
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+  <div>
+  <div>
+    <p class  = "idk">
+
+      <h2 class="featurette-heading idk"><b>-Challenges-</b></h2>
+    </p>
+  </div>
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row"  style="padding:30px;">
+      <div class="col-lg-4">
+
+        <h2>Natural Element Integration</h2>
+        <p> Challenge: To integrate the movement of clouds and the sun realistically while harmonising with the football hit simulation was a challenge.  
+         <div> This challenge was overcomed by researching natural motion patterns, ensuring precise coordination of timing and motion in the scene.
+        </div>  </p>
+        
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+
+        <h2>Football Hit Realism</h2>
+        <p>Challenge: To  achieve a convincing football hit simulation, including accurate physics of trajectory, spin, and impact was a challenge.</p>
+        <div>
+          This challenge was overcomed  through iterative development, refining parameters, animations, and incorporating feedback for realism.
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+
+        <h2>Visual Cohesion</h2>
+        <p>Challenge: To balance colours and textures to seamlessly integrate the dynamic sky with the action on the field was a challenge.
+        </p>
+        <div>
+          This challenge was overcomed  by taking help of various colour schemes online and hence enhanced realism.
+        </div>
+      </div><!-- /.col-lg-4 -->
+      
+    </div >  
+      <div class="rownew">
+      <div class="col-lg-4" >
+
+        <h2>Performance Optimization</h2>
+        <p>Challenge: To ensure smooth rendering and animation performance while maintaining high visual quality was a challenge. 
+
+        </p>
+        <div>
+          This challenge was overcomed by optimising rendering settings, employing efficient modelling and animation techniques, and leveraging advancements in computer graphics technology.
+
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" >
+
+        <h2>Audience Engagement</h2>
+        <p>Challenge: To capture and maintain audience attention and immersion throughout the animation was a challenge. 
+        </p>
+        <div>
+          This challenge was overcomed by focusing on storytelling, creating compelling visuals and soliciting feedback to refine the overall impact of the animation.
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <!-- /.col-lg-4 -->
+   
+    <!-- /.row -->
+  </div>
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end button-33" role="button" ><a href="#" style="color: #5a5a5a; text-decoration:none;">Back to top</a></p>
+    <p>&copy; 2024 Team, Pixel Pioneers </p>
+  </footer>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+></script>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+></script>
+
+      
   </body>
 </html>

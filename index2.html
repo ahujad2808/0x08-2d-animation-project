@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+  <head>
+    <title>0x08 : 2D Animations (Project)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body class="h-full w-full text-sm">
+    <div class="container flex flex-col nowrap gap-2
+                p-8 h-full m-auto">
+      <header class="flex flex-col md:flex-row justify-between md:items-end">
+        <h1 class="flex-none text-2xl font-bold">0x08 :
+          2D Animations (Project)</h1>
+        <p class="md:text-right text-xs md:text-sm" id="by"></p>
+      </header>
+      <div class="flex-1 flex flex-col lg:flex-row
+                  gap-4 lg:gap-8">
+        <main class="experiment flex-1 flex flex-col gap-2">
+          <div class="flex-1 relative">
+            <canvas id="myCanvas"
+                    width="10" height="1"
+                    class=" bg-slate-100 w-full h-full"></canvas>
+            <div class="absolute top-0 right-0 text-center">
+              <a class="cursor-pointer block p-2
+                        text-blue-300 hover:text-blue-500
+                        active:text-blue-700"
+                 href="javascript:saveCanvas()"
+                 title="Download canvas as image."
+                 ><ion-icon
+                    name="save"
+                    class="text-3xl"
+                    ></ion-icon><br/>
+                <span class="text-sm">Download</span></a>
+          </div>          </div>
+        </main>
+       
+      </div>
+    </div>
+    <script type="text/javascript" src="./canvas-helpers.js"></script>
+    <script type="text/javascript" src="./animation.js"></script>
+    <script type="text/javascript" src="./experiment.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        main();
+      });
+    </script>
+  </body>
+</html>
